@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+
+{% block title %}Adicionar informações{% endblock %}
+
+{% block content %}
+    <div class="offset-1 col-10 list-div">
+        <h1> Texto para criptografar :</h1>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input class="btn btn-success" type="submit" value="Criptografar">
+        </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" 
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+</head>
+<body>
+  <body background="{% static 'img/fundodetela.jpg' %}"></body>
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+          <img class="img-fluid" src="{% static 'img/logo2.jpg' %}">
+          <h1><a class="navbar-brand ; col-lg-2" > Crise Hídrica</a> </h1> <img src="" id="imgrec"/>
+          <h5 class="navbar-1 ; text-dark ; col-lg-6 ; text-center" id="slogan">As suas virtudes escrevemos na água. </h5>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse"  id="NavbarLinks">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Notícias</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Serviços</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="http://127.0.0.1:8000/accounts/login/">Login</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+
+          <div class="container text-center img-fluid animate__bounceIn" id="setasrec">
+            <img src="{% static 'img/slide3.jpg' %}">
+        </div>
+        <div class="container" id="texto">
+            <div class="align-self-center ; animate__animated animate__flipInX ; text-dark; img-fluid" id="texto1">
+                <p>A crise hídrica é resultado do baixo nível de água do reservatório, que deveria estar em nível normal naquele momento para atender às necessidades dos moradores e ela cobre todos os problemas relacionados à escassez humana de água.
+                  Em nosso país, atinge principalmente a região Sudeste, a região metropolitana de São Paulo e o semi-árido nordestino. As secas têm ocorrido com frequência nessas regiões, mas na última década a seca aumentou muito. Você já deve saber que embora nosso planeta se chame de terra, a terra é coberta por 70% de água, o que nos faz pensar que a crise hídrica no mundo deveria ser um problema impossível, mas infelizmente não é realidade. Aprenda um pouco mais vendo a
+                  <a class="btn-link" href="https://educador.brasilescola.uol.com.br/estrategias-ensino/a-distribuicao-agua-no-planeta.htm#:~:text=%2D%2097%25%20da%20%C3%A1gua%20dispon%C3%ADvel%20no,ou%20seja%2C%20%C3%A9%20%C3%A1gua%20salgada." role="link"> distruição de água no planeta.</a>
+              </p>
+                <p></p>  
+            </div>
+        </div>
+
+          {% block content %}{% endblock %}
+          <footer class="page-footer font-small blue pt-4">
+
+            <div class="container-fluid ; align-self-center ; text-dark">
+              <div class="container" id="baixo">
+                  <div class="row">
+                      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-8 text-center" id="duvida"> 
+                          <p class="text-dark"><small><span>Qualquer dúvida entre em contato via Whats'app: 9 7777 6543</span> <img src="{% static 'img/whatsapp.png' %}"> 
+                          </small></p>
+                      </div>
+                      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-2 ; text-center">
+                          <p class="text-dark"><small><span>Redes Sociais :   </span><img class="img-fluid" src="{% static 'img/twitter (1).png' %}">
+                              <img class="img-fluid" src="{% static 'img/instagram.png' %}">
+                          </small></p> 
+                      </div>
+                  </div>
+                </div>
+            </div>
+          </footer>
+        
+    </div>
+</body>
+</html>

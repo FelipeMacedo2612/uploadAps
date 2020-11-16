@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" 
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}" />
+</head>
+<body>
+  <body background="{% static 'img/fundo.branco.jpg' %}">
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+          <img class="img-fluid" src="{% static 'img/logo2.jpg' %}">
+          <h1><a class="navbar-brand ; col-lg-2" > Crise Hídrica</a> </h1> <img src="" id="imgrec"/>
+          <h5 class="navbar-1 ; text-dark ; col-lg-6 ; text-center" id="slogan">As suas virtudes escrevemos na água. </h5>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse"  id="NavbarLinks">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Notícias</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Serviços</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Sobre nós</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+
+          {% block content %}{% endblock %}
+          <footer class="page-footer font-small blue pt-4">
+
+            <div class="container-fluid ; align-self-center ; text-dark">
+              <div class="container" id="rodape">
+                  <div class="row">
+                      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-8 text-center" id="duvida"> 
+                          <p class="text-dark"><small><span>Qualquer dúvida entre em contato via Whats'app: 9 7777 6543</span> <img src="{% static 'img/whatsapp.png' %}"> 
+                          </small></p>
+                      </div>
+                      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-2 ; text-center">
+                          <p class="text-dark"><small><span>Redes Sociais :   </span><img class="img-fluid" src="{% static 'img/twitter (1).png' %}">
+                              <img class="img-fluid" src="{% static 'img/instagram.png' %}">
+                          </small></p> 
+                      </div>
+                  </div>
+                </div>
+            </div>
+          </footer>
+        
+    </div>
+</body>
+</html>
